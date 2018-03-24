@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center_vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="@dimen/space_normal"
+    android:paddingRight="@dimen/space_normal"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/tvIndex"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="@color/secondaryTextColor" />
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="24dp"
+        android:layout_toRightOf="@+id/tvIndex"
+        android:background="@drawable/bg_violet_light"
+        android:gravity="center"
+        android:paddingBottom="4dp"
+        android:paddingTop="2dp"
+        android:text="1452"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvBull"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/tvCow"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/tvCow"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@color/pink" />
+
+</RelativeLayout>

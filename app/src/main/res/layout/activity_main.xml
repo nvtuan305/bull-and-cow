@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/space_normal"
+    tools:context="com.goodlife.bullandcow.view.home.HomeActivity">
+
+    <ImageView
+        android:id="@+id/imvLogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_cow" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_normal"
+        android:gravity="center"
+        android:padding="@dimen/space_normal"
+        android:text="@string/prompt_maybe_you_know"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/imvLogo" />
+
+    <LinearLayout
+        android:id="@+id/btnPlayNow"
+        android:layout_width="224dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/space_large"
+        android:background="@drawable/bg_pink"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_large"
+        android:paddingRight="@dimen/space_normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_play" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_normal"
+            android:text="@string/action_play_game"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_larger" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnHowToPlay"
+        android:layout_width="224dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/space_normal"
+        android:background="@drawable/bg_violet_light"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_large"
+        android:paddingRight="@dimen/space_normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayNow">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_htp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_normal"
+            android:text="@string/action_how_to_play"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_larger" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnLeaderBoard"
+        android:layout_width="224dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/space_normal"
+        android:background="@drawable/bg_yellow"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_large"
+        android:paddingRight="@dimen/space_normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnHowToPlay">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_trophy" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_normal"
+            android:text="@string/action_leaderboard"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_larger" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

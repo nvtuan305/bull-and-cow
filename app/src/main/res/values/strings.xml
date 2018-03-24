@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Bull and Cow</string>
+    <string name="title_activity_game">GameActivity</string>
+
+    <string name="you_guess">You guess:</string>
+    <string name="prompt_maybe_you_know">Maybe you know that the number can be resolved in 5 guesses.\n\nYou can or not?</string>
+    <string name="message_duplicate_number">The number must not have duplicate number inside</string>
+    <string name="message_empty_guess">You don\'t guess any number</string>
+    <string name="default_dialog_message">This is a message</string>
+    <string name="prompt_you_win">Congratulation!\nYou WIN!!!!!!!</string>
+    <string name="cancel_game">Do you want to quit the game?</string>
+
+    <string name="action_play_game">Play game</string>
+    <string name="action_how_to_play">How to play</string>
+    <string name="action_leaderboard">Leaderboard</string>
+    <string name="action_check_my_guess">Check my guess</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_yes">Yes</string>
+    <string name="action_give_up">Give Up</string>
+    <string name="action_play_again">Play again</string>
+</resources>

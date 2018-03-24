@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <font
+        android:font="@font/circularstd_light"
+        android:fontStyle="normal"
+        android:fontWeight="300"
+        app:font="@font/circularstd_light"
+        app:fontStyle="normal"
+        app:fontWeight="300" />
+
+    <font
+        android:font="@font/circularstd_lightitalic"
+        android:fontStyle="normal"
+        android:fontWeight="300"
+        app:font="@font/circularstd_lightitalic"
+        app:fontStyle="normal"
+        app:fontWeight="300" />
+
+    <font
+        android:font="@font/circularstd_medium"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        app:font="@font/circularstd_medium"
+        app:fontStyle="normal"
+        app:fontWeight="400" />
+
+    <font
+        android:font="@font/circularstd_mediumitalic"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        app:font="@font/circularstd_mediumitalic"
+        app:fontStyle="normal"
+        app:fontWeight="400" />
+
+    <font
+        android:font="@font/circularstd_bold"
+        android:fontStyle="normal"
+        android:fontWeight="500"
+        app:font="@font/circularstd_bold"
+        app:fontStyle="normal"
+        app:fontWeight="500" />
+
+    <font
+        android:font="@font/circularstd_bolditalic"
+        android:fontStyle="normal"
+        android:fontWeight="500"
+        app:font="@font/circularstd_bolditalic"
+        app:fontStyle="normal"
+        app:fontWeight="500" />
+
+    <font
+        android:font="@font/circularstd_black"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        app:font="@font/circularstd_black"
+        app:fontStyle="normal"
+        app:fontWeight="700" />
+
+    <font
+        android:font="@font/circularstd_blackitalic"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        app:font="@font/circularstd_blackitalic"
+        app:fontStyle="normal"
+        app:fontWeight="700" />
+
+</font-family>

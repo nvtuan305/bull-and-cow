@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_white"
+    android:maxWidth="200dp"
+    android:padding="@dimen/space_large">
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_large"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:padding="@dimen/space_normal"
+        android:text="@string/default_dialog_message"
+        android:textSize="@dimen/font_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMessage"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/space_small"
+            android:layout_weight="1"
+            android:background="@drawable/bg_violet_light"
+            android:text="@string/action_cancel"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_normal" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/space_small"
+            android:layout_weight="1"
+            android:background="@drawable/bg_pink"
+            android:text="@string/action_yes"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_normal" />
+
+    </LinearLayout>
+
+</RelativeLayout>
