@@ -13,8 +13,11 @@ import com.goodlife.bullandcow.model.BullCowNumber;
 import com.goodlife.bullandcow.model.GuessResult;
 import com.goodlife.bullandcow.util.ToastUtil;
 import com.goodlife.bullandcow.view.base.BaseActivity;
+import com.goodlife.bullandcow.view.data.PreferenceHelper;
 import com.goodlife.bullandcow.view.dialog.SimpleDialog;
 import com.goodlife.bullandcow.view.dialog.WinnerDialog;
+
+import java.util.Date;
 
 public class GameActivity extends BaseActivity {
     private TextView mTvInputNumber, mTvEmptyGuess;
@@ -25,6 +28,7 @@ public class GameActivity extends BaseActivity {
     private BullCowNumber mInputNumber;
     private GuessResultAdapter mGuessResultAdapter;
     private boolean mIsWin;
+    private long mStartTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,7 @@ public class GameActivity extends BaseActivity {
     private void initializeGame() {
         mInputNumber = new BullCowNumber(DIGIT);
         mGame = new Game(DIGIT);
+        mStartTime = new Date().getTime();
     }
 
     /**
@@ -152,11 +157,16 @@ public class GameActivity extends BaseActivity {
         mTvEmptyGuess.setVisibility(View.GONE);
         mRcvGuessResult.setVisibility(View.VISIBLE);
         mGuessResultAdapter.add(result);
+
+        // Reset input number
         mInputNumber.reset();
         showInputNumber();
 
+        // Winner
         if (result.isCorrectAnswer()) {
-            showWinner();
+            mIsWin = true;
+            saveScore(result);
+            showWinnerDialog();
         }
     }
 
@@ -173,10 +183,20 @@ public class GameActivity extends BaseActivity {
     }
 
     /**
+     * Save user score
+     * @param result Guess result
+     */
+    private void saveScore(GuessResult result) {
+        long time = new Date().getTime() - mStartTime;
+        PreferenceHelper pref = new PreferenceHelper(this);
+        pref.saveGameResult(time, result.getBullCowNumber().getNumberInString());
+        Log.e("GAME", pref.getRank().toString());
+    }
+
+    /**
      * Show the winner
      */
-    private void showWinner() {
-        mIsWin = true;
+    private void showWinnerDialog() {
         final WinnerDialog winnerDialog = WinnerDialog.newInstance();
         winnerDialog.setOnClickListener(
                 new View.OnClickListener() {
